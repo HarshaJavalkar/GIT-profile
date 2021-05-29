@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import {Octokit} from 'octokit';
 import { OverviewComponent } from '../overview/overview.component';
 import { ServiceService } from '../service.service';
@@ -16,11 +16,25 @@ export class ContentComponent implements OnInit {
   data1 =''
   profileImage=''
   followersLink=''
-
+  w:boolean=false
+  x:boolean=false
+  y:boolean=false
+  
+  z:boolean=false
+count:number =0
 
   dataOfUser:string[]=[]
-  constructor(private ds:ServiceService,private hc:HttpClient, private ar:ActivatedRoute) { }
+  constructor(private ds:ServiceService,private hc:HttpClient, private ar:ActivatedRoute) {
 
+  
+
+    
+
+
+   }
+
+
+   
 
   a: any
   followersCount: number=0
@@ -50,7 +64,7 @@ objData=""
         this.users=data;
         let items=this.users
       
-
+        
 
         this.dataOfUser.push(items)
       
@@ -61,7 +75,7 @@ objData=""
 
 
 
-         this.data1=this.data1
+        //  this.data1=this.data1
           //  this.objData= (JSON.parse(this.users))
 
 
@@ -69,6 +83,17 @@ objData=""
       
       
       })
+
+      this.hc.get<any[]>(`https://api.github.com/users/${JSON.parse(this.data1)}/repos`).subscribe(
+
+        repos=>{
+
+          console.log(repos.length)
+          this.count=repos.length
+
+        }     
+
+      )
 
 this.hc.get<any[]>(`https://api.github.com/users/${JSON.parse(this.data1)}/followers`).subscribe(
 
@@ -89,6 +114,57 @@ this.hc.get<any[]>(`https://api.github.com/users/${JSON.parse(this.data1)}/follo
      
 
   }
+
+
+
+  placeholder(dataplace:any){
+
+
+if(dataplace==1){
+
+  this.w=true
+
+  this.x=false
+
+  this.y=false
+  this.z=false
+}
+
+
+
+if(dataplace==2){
+
+  this.w=false
+
+  this.x=true
+
+  this.y=false
+  this.z=false
+}
+
+
+if(dataplace==3){
+
+  this.w=false
+
+  this.x=false
+
+  this.y=true
+  this.z=false
+}
+
+if(dataplace==4){
+
+  this.w=false
+
+  this.x=false
+
+  this.y=false
+  this.z=true
+}
+
+
+   }
 
 
 

@@ -12,6 +12,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { PackagesComponent } from './packages/packages.component';
 import { HttpClientModule } from '@angular/common/http';
 // import { UsersComponent } from './users/users.component';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     // UsersComponent,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    PopoverModule.forRoot(),
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
     
   ],
   providers: [],

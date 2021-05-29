@@ -1,15 +1,27 @@
 
   .selected-component{
-      margin-bottom: 5px;
+      margin-bottom: 0px;
+      padding-bottom: 0;
   }
   .selected-component:hover{
   
   
       border-bottom: 3px solid rgb(192, 192, 192);
   }
-  
 
+  .badge-dark{
+
+
+
+    border-radius: 40%;
+    background-color: rgb(230, 230, 230);
+  }
   
+.placeholder-border{
+
+  border-bottom: 3px solid orange;  
+}
+
 
 
   li {

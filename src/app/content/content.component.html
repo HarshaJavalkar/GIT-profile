@@ -49,8 +49,11 @@
                     ></path>
                   </svg>
                   <a
+                  (click)="placeholder(1)"
                     routerLink="overview"
-                    class="text-dark d-inline"
+
+                    [ngClass]="w? 'placeholder-border' :''"
+                    class="text-dark d-inline  "
                     id="navbarSupportedContent"
                     >Overview</a
                   >
@@ -72,17 +75,24 @@
                   </svg>
 
                   <a
+                  
+                  (click)="placeholder(2)"
+                  
+                  [ngClass]="x? 'placeholder-border' :''"
                     routerLink="repositories"
                     class="nav-link text-dark"
                     class="d-inline"
                     id="navbarSupportedContent"
                   >
-                    <span> Repositories </span>
+                    <span> Repositories   <b class=" text-dark badge badge-dark">{{count}}</b></span> 
                   </a>
                 </li>
 
                 <li class="nav-item me-3 selected-component">
                   <a
+
+                  [ngClass]="y? 'placeholder-border' :''"
+                  (click)="placeholder(3)"
                     routerLink="projects"
                     class="nav-link text-dark"
                     class="d-inline"
@@ -106,26 +116,28 @@
                       ></path>
                     </svg>
 
-                    Projects</a
-                  >
+                    Projects</a>
                 </li>
 
                 <li class="nav-item selected-component active">
                   <svg
+
                     aria-hidden="true"
                     viewBox="0 0 16 16"
                     version="1.1"
                     data-view-component="true"
                     height="16"
                     width="16"
-                    class="octicon octicon-package UnderlineNav-octicon hide-sm"
-                  >
+                    class="octicon octicon-package UnderlineNav-octicon hide-sm" >
                     <path
                       fill-rule="evenodd"
                       d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"
                     ></path>
                   </svg>
                   <a
+                  
+                  [ngClass]="z? 'placeholder-border' :''"
+                  (click)="placeholder(4)"
                     routerLink="packages"
                     class="nav-link text-dark"
                     class="d-inline"

@@ -3,22 +3,29 @@
     border: 1px solid rgb(223, 223, 223);
     border-radius: 5px;
     padding: 1px;
-     width: 7vw;
+    
     background-color: rgba(245, 245, 245, 0.541);
     
     }
 
 
-    .card{
-
-        padding: 20px;
-
-        width: 25%;
-    }
-
     p{
 
-font-size: 12px;
+font-size: 14px;
 color:rgb(131, 131, 131);
 
     }
+
+
+    .card{
+
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+/* 
+    .card{
+
+        margin-top: 2.1%;
+     margin-left: 2.1%;
+        width: 31%;
+    } */

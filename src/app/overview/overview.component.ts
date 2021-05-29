@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { ThisReceiver } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
@@ -23,7 +24,7 @@ export class OverviewComponent implements OnInit {
  repos_url: string=''
  contributions: string= ''
  arr_names: any
-
+commits: any
 
  final:any;
 
@@ -38,6 +39,9 @@ export class OverviewComponent implements OnInit {
    this.fromParent= this.ds.getData()
 this.repos_url= this.fromParent[0].repos_url
 
+
+
+
 // console.log(JSON.parse(this.fromParent[0].login))
 this.hc.get<any[]>(`https://api.github.com/users/${ this.fromParent[0].login}/repos`).subscribe(
 // name desc lang
@@ -49,9 +53,19 @@ this.hc.get<any[]>(`https://api.github.com/users/${ this.fromParent[0].login}/re
           this.arr_names=[]
           this.final=[]
 
+
+          
+        
+
           for( let i =0 ; i < this.repos.length;++i){
 
             // console.log(this.repos[i].name)
+
+
+
+ 
+ 
+     
 
             this.hc.get<any[]>( `https://api.github.com/repos/${this.repos[i].owner.login}/${this.repos[i].name}/languages`).subscribe(
 
@@ -93,7 +107,6 @@ this.hc.get<any[]>(`https://api.github.com/users/${ this.fromParent[0].login}/re
 
 
 
-     
 
 
 
