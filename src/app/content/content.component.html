@@ -6,9 +6,13 @@
     stickNavbar-nav
     pt-5
     pb-2
-    sticky-top 
+    sticky-top
   "
-  style="z-index: 1; background-color: white; border-bottom: 0.5px solid rgb(233, 233, 233)"
+  style="
+    z-index: 1;
+    background-color: white;
+    border-bottom: 0.5px solid rgb(233, 233, 233);
+  "
 >
   <div class="container-fluid">
     <button
@@ -49,11 +53,10 @@
                     ></path>
                   </svg>
                   <a
-                  (click)="placeholder(1)"
+                    (click)="placeholder(1)"
                     routerLink="overview"
-
-                    [ngClass]="w? 'placeholder-border' :''"
-                    class="text-dark d-inline  "
+                    [ngClass]="w ? 'placeholder-border' : ''"
+                    class="text-dark d-inline"
                     id="navbarSupportedContent"
                     >Overview</a
                   >
@@ -67,7 +70,8 @@
                     data-view-component="true"
                     height="16"
                     width="16"
-                    class="octicon octicon-repo UnderlineNav-octicon hide-sm">
+                    class="octicon octicon-repo UnderlineNav-octicon hide-sm"
+                  >
                     <path
                       fill-rule="evenodd"
                       d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"
@@ -75,24 +79,26 @@
                   </svg>
 
                   <a
-                  
-                  (click)="placeholder(2)"
-                  
-                  [ngClass]="x? 'placeholder-border' :''"
+                    (click)="placeholder(2)"
+                    [ngClass]="x ? 'placeholder-border' : ''"
                     routerLink="repositories"
                     class="nav-link text-dark"
                     class="d-inline"
                     id="navbarSupportedContent"
                   >
-                    <span> Repositories   <b class=" text-dark badge badge-dark">{{count}}</b></span> 
+                    <span>
+                      Repositories
+                      <b class="text-dark badge badge-dark">{{
+                        count
+                      }}</b></span
+                    >
                   </a>
                 </li>
 
                 <li class="nav-item me-3 selected-component">
                   <a
-
-                  [ngClass]="y? 'placeholder-border' :''"
-                  (click)="placeholder(3)"
+                    [ngClass]="y ? 'placeholder-border' : ''"
+                    (click)="placeholder(3)"
                     routerLink="projects"
                     class="nav-link text-dark"
                     class="d-inline"
@@ -116,28 +122,28 @@
                       ></path>
                     </svg>
 
-                    Projects</a>
+                    Projects</a
+                  >
                 </li>
 
                 <li class="nav-item selected-component active">
                   <svg
-
                     aria-hidden="true"
                     viewBox="0 0 16 16"
                     version="1.1"
                     data-view-component="true"
                     height="16"
                     width="16"
-                    class="octicon octicon-package UnderlineNav-octicon hide-sm" >
+                    class="octicon octicon-package UnderlineNav-octicon hide-sm"
+                  >
                     <path
                       fill-rule="evenodd"
                       d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"
                     ></path>
                   </svg>
                   <a
-                  
-                  [ngClass]="z? 'placeholder-border' :''"
-                  (click)="placeholder(4)"
+                    [ngClass]="z ? 'placeholder-border' : ''"
+                    (click)="placeholder(4)"
                     routerLink="packages"
                     class="nav-link text-dark"
                     class="d-inline"
@@ -167,12 +173,10 @@
         [toChildImage]="profileImage"
         [toChildFCount]="followersCount"
         [toChildFgCount]="followingCount"
-
       ></app-profile>
     </div>
     <div class="col-sm-9">
-
-      <router-outlet  ></router-outlet>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

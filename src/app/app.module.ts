@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     OverviewComponent,
     RepositoriesComponent,
     ProjectsComponent,
-    PackagesComponent
+    PackagesComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PopoverModule.forRoot(),
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
-    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

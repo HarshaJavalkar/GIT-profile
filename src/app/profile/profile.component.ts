@@ -4,34 +4,18 @@ import { ServiceService } from '../service.service';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-data:any
+  data: any;
 
-  constructor(private ds:ServiceService) { 
+  constructor(private ds: ServiceService) {}
 
-    
-  }
+  @Input() toChild = '';
+  @Input() toChildImage = '';
 
-  @Input () toChild=''
-  @Input () toChildImage=''
+  @Input() toChildFCount = 0;
+  @Input() toChildFgCount = 0;
 
-  @Input () toChildFCount=0
-  @Input () toChildFgCount=0
-
-
-
-  ngOnInit(): void {
-
-
-
-
-
-
-
-  }
-
-
-
+  ngOnInit(): void {}
 }

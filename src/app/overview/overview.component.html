@@ -1,76 +1,55 @@
-
-<p style="text-align:left; font-weight: 600;" class="mt-4" >
-    Popular repositories
-    <span style="float:right; font-size: 15px; font-weight: 400;">
-       Customize your pins
-    </span>
+<p style="text-align: left; font-weight: 600" class="mt-4">
+  Popular repositories
+  <span style="float: right; font-size: 15px; font-weight: 400">
+    Customize your pins
+  </span>
 </p>
 
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
+  <div class="col mt-3" *ngFor="let repo of final">
+    <div class="card rounded-popular justify-content-center pb-0 p-2">
+      <div class="card-title">
+        <a
+          href=""
+          style="text-decoration: none; font-weight: 600; font-size: 14px"
+        >
+          {{ repo.name }}
+        </a>
+      </div>
 
+      <p>{{ repo.description }}</p>
 
-
-    
-<div class=" row row-cols-1 row-cols-sm-2 row-cols-md-2">
-
-
-    <div class="col mt-3"  *ngFor="let repo of final ">
-    
-        <div class="card  rounded-popular justify-content-center  pb-0  p-2"   >
-
-
-            <div class="card-title "> <a href="" style="text-decoration: none; font-weight: 600; font-size: 14px;"> {{repo.name}} </a>  </div>
-            
-             <p> {{repo.description}}</p>
-            
-            <p class="m-0" >
-                <i class="fas fa-circle mt-3  " [style.color]="repo.color" > </i> {{repo.language}}  </p>
-            </div>
-    
+      <p class="m-0">
+        <i class="fas fa-circle mt-3" [style.color]="repo.color"> </i>
+        {{ repo.language }}
+      </p>
     </div>
-
+  </div>
 </div>
 
+<p class="m-0 mt-5">362 contributions in the last year</p>
 
-    <p class="m-0 mt-5">362 contributions in the last year</p>
+<div
+  class="ms-auto"
+  style="border: 1px solid rgb(192, 192, 192); border-radius: 10px"
+>
+  <img
+    [src]="contributions"
+    alt=""
+    class="ms-auto"
+    width="100%"
+    class="p-2 mt-0 m-2"
+  />
 
+  <div class="d-flex me-5">
+    <div class="ms-auto">Less</div>
 
-
-     <div class=" ms-auto"style="border: 1px solid rgb(192, 192, 192); border-radius: 10px;">
-    <img [src]="contributions" alt="" class="ms-auto" width="90%" class="p-4  mt-0 m-2" >
-
-    <div class="d-flex  me-5" >
-
-        <div class="ms-auto ">
-    Less
-</div>
-
-    <div class="color-indicatrs-1 " ></div>
+    <div class="color-indicatrs-1"></div>
     <div class="color-indicatrs-2"></div>
     <div class="color-indicatrs-3"></div>
     <div class="color-indicatrs-4"></div>
     <div class="color-indicatrs-5"></div>
-    <div>
- More
+    <div>More</div>
+  </div>
 </div>
-    </div>
-
-      
-</div>
-<!-- <p class="mt-5"> Contribution activity</p>
-
-<div class="row">
-<div class="col-2">
-
-    <div data-view-component="true" class="TimelineItem-badge"><svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-repo-push">
-        <path fill-rule="evenodd" d="M1 2.5A2.5 2.5 0 013.5 0h8.75a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0V1.5h-8a1 1 0 00-1 1v6.708A2.492 2.492 0 013.5 9h3.25a.75.75 0 010 1.5H3.5a1 1 0 100 2h5.75a.75.75 0 010 1.5H3.5A2.5 2.5 0 011 11.5v-9zm13.23 7.79a.75.75 0 001.06-1.06l-2.505-2.505a.75.75 0 00-1.06 0L9.22 9.229a.75.75 0 001.06 1.061l1.225-1.224v6.184a.75.75 0 001.5 0V9.066l1.224 1.224z"></path>
-    </svg></div>
-
-
-</div>
-
-<div class="col-10">
-
-
-    <h1>jddlqjwd</h1>
-</div>
-</div> -->
+<!--  -->

@@ -1,65 +1,46 @@
-.rounded-popular{
-
-    border-radius: 10px;
+.rounded-popular {
+  border-radius: 10px;
 }
 
 .color-indicatrs-1,
 .color-indicatrs-2,
 .color-indicatrs-3,
-
 .color-indicatrs-4,
 .color-indicatrs-5 {
+  margin: 3px;
 
-    margin: 3px;
-   
-/* float: right; */
-height: 15px;
-    width: 15px;
-    /* border: 1px solid black; */
-
+  /* float: right; */
+  height: 15px;
+  width: 15px;
+  /* border: 1px solid black; */
 }
 
-
-.color-indicatrs-5{
-
-    background-color: rgb(0, 97, 0);
+.color-indicatrs-5 {
+  background-color: rgb(0, 97, 0);
 }
 
-.color-indicatrs-4{
-
-    background-color: rgb(0, 141, 0);
+.color-indicatrs-4 {
+  background-color: rgb(0, 141, 0);
 }
 
-
-.color-indicatrs-3{
-
-    background-color: rgb(3, 190, 3);
+.color-indicatrs-3 {
+  background-color: rgb(3, 190, 3);
 }
 
-.color-indicatrs-2{
-
-    background-color: rgba(96, 199, 0, 0.418);
+.color-indicatrs-2 {
+  background-color: rgba(96, 199, 0, 0.418);
 }
 
-.color-indicatrs-1{
-
-    background-color: rgb(234, 255, 234);
+.color-indicatrs-1 {
+  background-color: rgb(234, 255, 234);
 }
 
-
-
-.vl{
-
-    border-left: 3px solid rgb(223, 223, 223);
-    height: 60px;
-    margin-left: 10px;
+.vl {
+  border-left: 3px solid rgb(223, 223, 223);
+  height: 60px;
+  margin-left: 10px;
 }
 
-
-.TimelineItem-badge{
-
-   
-margin-left: 3px solid grey;
-
-
+.TimelineItem-badge {
+  margin-left: 3px solid grey;
 }

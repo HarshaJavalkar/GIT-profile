@@ -3,32 +3,20 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ServiceService {
-localArray:  any
+  localArray: any;
 
+  constructor(private hc: HttpClient) {}
 
-
-  constructor(private hc :HttpClient) { 
-
-  
-
+  sendData(data: any) {
+    this.localArray = data;
   }
 
-
-  sendData(data:any){
-    this.localArray=data
-  }
-
-
-
-  
-  getData(){
+  getData() {
     // console.log("localarray",this.lo calArray)
 
     return this.localArray;
   }
-  
-
 }

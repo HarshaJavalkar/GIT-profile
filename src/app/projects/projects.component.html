@@ -1,61 +1,81 @@
-
 <div class="w-50">
-<input type="text" class="find-repos" placeholder="Find a repository...">
+  <input type="text" class="find-repos" placeholder="Find a repository..." />
 </div>
-
-
 
 <div class="card">
+  <div class="card-header p-3 d-flex">
+    <div class="float-left">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 16 16"
+        version="1.1"
+        data-view-component="true"
+        height="16"
+        width="16"
+        class="octicon octicon-project"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"
+        ></path>
+      </svg>
 
-<div class="card-header p-3 d-flex">
+      <b class="ms-2">0 open</b>
+      <p class="d-inline ms-4">0 closed</p>
+    </div>
 
-    <div class="float-left ">
-    <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-project">
-        <path fill-rule="evenodd" d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"></path>
-    </svg> 
-
-    <b class="ms-2">0 open</b>
-    <p class="d-inline ms-4">0 closed</p>
-</div>
-
-<div class="ms-auto">
-    <div class="row">
+    <div class="ms-auto">
+      <div class="row">
         <div class="col-xs-12 col-12 col-sm-6 mb-3">
-          
           <div class="btn-group" dropdown>
-            <span id="button-autoclose1" dropdownToggle type="button" class=" dropdown-toggle"
-                    aria-controls="dropdown-autoclose1">
-            Sort <span class="caret"></span>
-          </span>
-            <ul id="dropdown-autoclose1" *dropdownMenu class="dropdown-menu"
-                role="menu" aria-labelledby="button-autoclose1">
-              <li role="menuitem"><a class="dropdown-item" style="cursor: pointer;" >Action</a></li>
-              <li role="menuitem"><a class="dropdown-item" style="cursor: pointer;">Another action</a></li>
-              <li role="menuitem"><a class="dropdown-item" style="cursor: pointer;" >Something else here</a></li>
+            <span
+              id="button-autoclose1"
+              dropdownToggle
+              type="button"
+              class="dropdown-toggle"
+              aria-controls="dropdown-autoclose1"
+            >
+              Sort <span class="caret"></span>
+            </span>
+            <ul
+              id="dropdown-autoclose1"
+              *dropdownMenu
+              class="dropdown-menu"
+              role="menu"
+              aria-labelledby="button-autoclose1"
+            >
+              <li role="menuitem">
+                <a class="dropdown-item" style="cursor: pointer">Newest</a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" style="cursor: pointer">Oldest</a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" style="cursor: pointer"
+                  >Recently Updated</a
+                >
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" style="cursor: pointer"
+                  >Least Recently updated</a
+                >
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" style="cursor: pointer"
+                  >Another action</a
+                >
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" style="cursor: pointer">Name</a>
+              </li>
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body mx-auto p-5">
+    <h5>{{ username }} doesn't have any projects yet.</h5>
+  </div>
 </div>
-
-</div>
-
-</div>
-
-<div class="card-body mx-auto p-5">
-
-
-    <h5> doesn't have any projects yet.</h5>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
