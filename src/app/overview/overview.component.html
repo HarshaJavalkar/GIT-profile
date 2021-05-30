@@ -5,41 +5,14 @@
   </span>
 </p>
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
-  <div class="col mt-3" *ngFor="let repo of final">
-    <div class="card rounded-popular justify-content-center pb-0 p-2">
-      <div class="card-title">
-        <a
-          href=""
-          style="text-decoration: none; font-weight: 600; font-size: 14px"
-        >
-          {{ repo.name }}
-        </a>
-      </div>
+<app-pinned-repositories class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
 
-      <p>{{ repo.description }}</p>
-
-      <p class="m-0">
-        <i class="fas fa-circle mt-3" [style.color]="repo.color"> </i>
-        {{ repo.language }}
-      </p>
-    </div>
-  </div>
-</div>
+</app-pinned-repositories>
 
 <p class="m-0 mt-5">362 contributions in the last year</p>
 
-<div
-  class="ms-auto"
-  style="border: 1px solid rgb(192, 192, 192); border-radius: 10px"
->
-  <img
-    [src]="contributions"
-    alt=""
-    class="ms-auto"
-    width="100%"
-    class="p-2 mt-0 m-2"
-  />
+<div class="ms-auto" style="border: 1px solid rgb(192, 192, 192); border-radius: 10px">
+  <img [src]="contributions" alt="" class="ms-auto" width="100%" class="p-2 mt-0 m-2" />
 
   <div class="d-flex me-5">
     <div class="ms-auto">Less</div>

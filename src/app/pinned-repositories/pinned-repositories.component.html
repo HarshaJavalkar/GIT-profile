@@ -1,0 +1,16 @@
+<div class="col mt-3" *ngFor="let repo of pinned_repos">
+  <div class="card rounded-popular justify-content-between pb-0 p-2" style="height: 140px">
+    <div class="card-title">
+      <a [href]="repo.link" style="text-decoration: none; font-weight: 600; font-size: 18px">
+        {{ repo.repo }}
+      </a>
+    </div>
+
+    <p>{{ repo.description }}</p>
+
+    <p class="m-0 mb-2">
+      <i class="fas fa-circle mt-3" [style.color]="repo.color"> </i>
+      {{ repo.language }}
+    </p>
+  </div>
+</div>
