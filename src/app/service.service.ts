@@ -35,6 +35,12 @@ return this.hc.get(`https://api.github.com/users/${JSON.parse(data1)}`)
   }
 
 
+  get_repos_pushed(data1:any):Observable<any>{
+
+
+    return this.hc.get(`https://api.github.com/users/${data1}/repos?sort=pushed`)
+  }
+
 
   get_contributions_api(data1:any):Observable<any>{
 

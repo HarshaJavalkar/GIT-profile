@@ -1,3 +1,8 @@
-<p>contriutions works!</p>
+<i *ngFor="let finals of final">
+<span type="button"  class="me-2"
+            popover="{{finals.date}}"
+            triggers="mouseenter:mouseleave" [style.background-color]="finals.color" style="width: 15px; height: 15px; ">
+            
+</span>
 
-<h1>h= {{data}}</h1>
+</i>

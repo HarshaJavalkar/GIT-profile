@@ -23,7 +23,7 @@ export class ContentComponent implements OnInit {
   y: boolean = false;
 
   z: boolean = false;
-  count: number = 0;
+  count: any = 0;
 
   dataOfUser: string[] = [];
   constructor(
@@ -36,7 +36,7 @@ export class ContentComponent implements OnInit {
    
 
       
-
+this.count=localStorage.getItem('count')
 
 
 

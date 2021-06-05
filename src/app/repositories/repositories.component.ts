@@ -24,6 +24,7 @@ export class RepositoriesComponent implements OnInit {
   repos_url: string = '';
   contributions: string = '';
   arr_names: any;
+  data1 :any;
 
   final: any;
 
@@ -31,22 +32,27 @@ export class RepositoriesComponent implements OnInit {
     this.colors = { ...Colors };
     dayjs.extend(relativeTime);
 
-    setTimeout(() => {
-      // this.fromParent = this.ds.getData();
-      this.repos_url = this.fromParent[0].repos_url;
+
+    this.data1=localStorage.getItem('user')
+
+
+   
+      // this.repos_url = this.fromParent[0].repos_url;
 
       // console.log(JSON.parse(this.fromParent[0].login))
-      this.hc
-        .get<any[]>(
-          `https://api.github.com/users/${this.fromParent[0].login}/repos?sort=pushed`
-        )
+      this.ds.get_repos_pushed(this.data1)
+   
         .subscribe(
           // name desc lang
           (data) => {
             this.repos = data;
 
+
+
+           localStorage.setItem('count',this.repos.length) 
+
             this.arr_names = [];
-            this.final = data.map((repo) => {
+            this.final = data.map((repo:any) => {
               return {
                 name: repo.name,
                 description: repo.description,
@@ -63,6 +69,10 @@ export class RepositoriesComponent implements OnInit {
             });
           }
         );
-    }, 1000);
+
+
+
+                
+
   }
 }
