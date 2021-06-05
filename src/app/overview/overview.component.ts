@@ -25,68 +25,119 @@ export class OverviewComponent implements OnInit {
   contributions: string = '';
   arr_names: any;
   commits: any;
-
-  final: any;
+  data1: any
+  dataUser: any
+  user_name: any
+  created_at: any
+  list_arrays: any[]= []   
+  arrayData : any[]=[]
+  final: any[]=[];
 
   constructor(
     private ar: ActivatedRoute,
     private ds: ServiceService,
     private hc: HttpClient
-  ) {}
+  ) {
+
+
+
+    
+let today = new Date()
+
+let year =today.getFullYear()
+  localStorage.setItem("year",year.toString())
+  }
+
+
+  contributions_to_child(year:any){
+
+
+    localStorage.setItem('year',year)
+    
+    console.log("dd",year)
+  }
 
   ngOnInit(): void {
-    this.colors = { ...Colors };
+    this.colors = { ...Colors }
 
-    setTimeout(() => {
-      this.fromParent = this.ds.getData();
-      this.repos_url = this.fromParent[0].repos_url;
 
-      // console.log(JSON.parse(this.fromParent[0].login))
-      this.hc
-        .get<any[]>(
-          `https://api.github.com/users/${this.fromParent[0].login}/repos`
-        )
-        .subscribe(
-          // name desc lang
-          (data) => {
-            this.repos = data;
 
-            this.repos = this.repos.slice(0, 6);
+    this.data1= localStorage.getItem('user')
+    console.log(this.data1)
 
-            this.arr_names = [];
-            this.final = [];
+    this.ds.get_repos_from_api(this.data1).subscribe(
 
-            for (let i = 0; i < this.repos.length; ++i) {
-              // console.log(this.repos[i].name)
 
-              this.hc
-                .get<any[]>(
-                  `https://api.github.com/repos/${this.repos[i].owner.login}/${this.repos[i].name}/languages`
-                )
-                .subscribe((res) => {
-                  // console.log( "res",res)
-                  // this.arr_names = [ ...this.arr_names, Object.keys(res).length===0?'':Object.keys(res)[0] ]
-                  let language =
-                    Object.keys(res).length === 0 ? '' : Object.keys(res)[0];
-                  this.final = [
-                    ...this.final,
-                    {
-                      name: this.repos[i].name,
-                      description: this.repos[i].description,
-                      language: language,
-                      color: this.colors[language].color,
-                    },
-                  ];
+res=>{
 
-                  // if( Object.keys(res)[0]==null)
-                  // this.arr_names.append('')
-                  //          this.arr_names.append( Object.keys(res)[0])
-                });
-            }
-          }
-        );
+this.dataUser=res
+this.arrayData=this.dataUser
 
-      this.contributions = `https://ghchart.rshah.org/${this.fromParent[0].login}`;
-    }, 1000);
+this.user_name= localStorage.getItem('user')
+this.arrayData=this.arrayData.slice(0,6);
+
+
+
+
+
+    for (let i = 0; i < this.arrayData.length; ++i) {
+    
+
+    
+        // .get<any[]>(
+        //   `https://api.github.com/repos/${this.arrayData[i].owner.login}/${this.arrayData[i].name}/languages`
+        // )
+        // .subscribe((res) => {
+          // console.log( "res",res)
+          // this.arr_names = [ ...this.arr_names, Object.keys(res).length===0?'':Object.keys(res)[0] ]
+          let language = this.arrayData[i].language ? this.arrayData[i].language: ' '
+
+          console.log(language)
+         
+          this.final = [
+            ...this.final,
+            {
+              name: this.arrayData[i].name,
+              description: this.arrayData[i].description,
+              language: language,
+              color: this.colors[language].color,
+            },
+          ];
+
+
+        
+      
+    }
+
+    console.log(this.final)
   }
+);
+
+
+
+
+this.created_at= localStorage.getItem('created')
+
+this.created_at=parseInt(this.created_at)
+
+
+let today = new Date()
+// console.log(today.getFullYear())
+
+for( let i = today.getFullYear() ; i>=  this.created_at ; --i){
+
+
+this.list_arrays.push(i)
+
+
+
+}
+
+console.log(this.list_arrays)
+
+
+
+// console.log(this.arrayData)
+
+}
 }

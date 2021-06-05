@@ -32,7 +32,7 @@ export class RepositoriesComponent implements OnInit {
     dayjs.extend(relativeTime);
 
     setTimeout(() => {
-      this.fromParent = this.ds.getData();
+      // this.fromParent = this.ds.getData();
       this.repos_url = this.fromParent[0].repos_url;
 
       // console.log(JSON.parse(this.fromParent[0].login))

@@ -10,13 +10,13 @@ import { OverviewComponent } from './overview/overview.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PackagesComponent } from './packages/packages.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 // import { UsersComponent } from './users/users.component';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-
+import { ContriutionsComponent } from './contriutions/contriutions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +28,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ProjectsComponent,
     PackagesComponent,
     PagenotfoundComponent,
+    ContriutionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,8 +36,11 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     AppRoutingModule,
     HttpClientModule,
     PopoverModule.forRoot(),
+    
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
+    HttpClientJsonpModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent],

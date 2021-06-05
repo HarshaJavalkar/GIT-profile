@@ -1,5 +1,5 @@
 export default {
-    "": {
+    " ": {
         "color": "#ffffff",
         "url": "https://github.com/trending?l=1C-Enterprise"
     },
