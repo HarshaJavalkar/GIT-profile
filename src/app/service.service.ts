@@ -8,102 +8,50 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ServiceService implements OnInit {
-
-
-
-  stars:any
-  users:any
-
+  stars: any;
+  users: any;
 
   dataOfUser: string[] = [];
-  Pro_data:any;
+  Pro_data: any;
 
-// private rest_url=` `
+  // private rest_url=` `
 
-
-  
-ngOnInit(){
-
-   
-
-  }
- get_data_from_api(data1:any):Observable<any>{
-
-
-return this.hc.get(`https://api.github.com/users/${JSON.parse(data1)}`)
-  
+  ngOnInit() {}
+  get_data_from_api(data1: any): Observable<any> {
+    return this.hc.get(`https://api.github.com/users/${JSON.parse(data1)}`);
   }
 
-  organisations(data1:any):Observable<any>{
+  organisations(data1: any): Observable<any> {
+    console.log(JSON.parse(data1));
 
-
-    
-    console.log(JSON.parse(data1))
-
-    return this.hc.get(`https://api.github.com/users/${JSON.parse(data1)}/orgs`)
+    return this.hc.get(
+      `https://api.github.com/users/${JSON.parse(data1)}/orgs`
+    );
   }
 
-
-  get_repos_pushed(data1:any):Observable<any>{
-
-    return this.hc.get(`https://api.github.com/users/${data1}/repos?sort=pushed`)
+  get_repos_pushed(data1: any): Observable<any> {
+    return this.hc.get(
+      `https://api.github.com/users/${data1}/repos?sort=pushed`
+    );
   }
 
-
-  get_contributions_api(data1:any):Observable<any>{
-
-    
-  
-    return this.hc.get(`https://github-contributions.vercel.app/api/v1/${data1}`)
+  get_contributions_api(data1: any): Observable<any> {
+    return this.hc.get(
+      `https://github-contributions.vercel.app/api/v1/${data1}`
+    );
   }
 
-
-
-
-
-
-  
-
-  get_stars_api(data1:any):Observable<any>{
-
-
-
-    return this.hc.get(`https://api.github.com/users/${JSON.parse(data1)}/starred`)
+  get_stars_api(data1: any): Observable<any> {
+    return this.hc.get(
+      `https://api.github.com/users/${JSON.parse(data1)}/starred`
+    );
   }
 
-
-
-
-
-  get_repos_from_api(data1:any):Observable<any>{
-
-
-
-    return this.hc.get(`https://api.github.com/users/${data1}/repos`)
+  get_repos_from_api(data1: any): Observable<any> {
+    return this.hc.get(`https://api.github.com/users/${data1}/repos`);
   }
-  
 
   localArray: any;
 
-  constructor(private hc: HttpClient ,private ar: ActivatedRoute) {
-
-
-
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
+  constructor(private hc: HttpClient, private ar: ActivatedRoute) {}
 }

@@ -3,43 +3,40 @@
     <p class="m-0">Popular repositories</p>
 
     <div class="row row-cols-1 row-cols-md-2 justify-content-center">
-
-
-
-
-
-
       <div class="card card-overview" *ngFor="let repo of final">
-  <div class="card-titles">
-          <a class="text-decoration" href="https://github.com/{{user_name}}/{{repo.name}}">
-          {{repo.name}}
-        </a>
- </div>
-        <span class="sub-title">Forked from Pierian-Data/Complete-Python-3-Bootcamp</span>
-        <div class="card-body p-0 pt-3">
-          <p>{{repo.description}}</p>
+        <div class="card-titles">
+          <a
+            class="text-decoration"
+            href="https://github.com/{{ user_name }}/{{ repo.name }}"
+          >
+            {{ repo.name }}
+          </a>
         </div>
-  
-        <div class="card-footer p-0" *ngIf="repo.color">
+        <span class="sub-title"
+          >Forked from Pierian-Data/Complete-Python-3-Bootcamp</span
+        >
+        <div class="card-body p-0 pt-3">
+          <p>{{ repo.description }}</p>
+        </div>
 
+        <div class="card-footer p-0" *ngIf="repo.color">
           <i class="fas fa-circle" [style.color]="repo.color"></i>
-          <p class="m-0 d-inline ms-1 ">{{repo.language}}</p>
+          <p class="m-0 d-inline ms-1">{{ repo.language }}</p>
         </div>
       </div>
     </div>
   </div>
 
+  <p class="mt-5">
+    {{ count_contributions }} contributions in {{ year_selected }}
+  </p>
 
-<p class="mt-5">{{count_contributions}} contributions in {{year_selected}}</p>
-
-  <div class="card   p-2">
-    
+  <div class="card p-2">
     <ul class="d-flex mt-4 calender-months">
- 
       <li class="month-row">Jan</li>
       <li class="month-row">Feb</li>
       <li class="month-row">Mar</li>
-  
+
       <li class="month-row">Apr</li>
       <li class="month-row">May</li>
       <li class="month-row">Jun</li>
@@ -50,96 +47,64 @@
       <li class="month-row">Nov</li>
       <li class="month-row">Dec</li>
     </ul>
-  
-    <div class="row ">
+
+    <div class="row">
       <div class="colsl-1">
         <ul class="calender-days">
-          <li class=" month-row">Mon</li>
-  
+          <li class="month-row">Mon</li>
+
           <li class="pt-4 month-row">Wed</li>
           <li class="pt-4 month-row">Fri</li>
         </ul>
       </div>
-  
-      <div class="col-11  ps-0 pe-2">
-        <!-- <div class="grid-container">-->
-          <div class="new-grid" > 
-            <a href="" *ngFor="let finals of final1 ; let i = index "
-              type="button"
-              class="mt-0 cell"
-              popover=" {{ finals.count }} contributions {{ finals.date }} "
-              popoverClass="my-custom-class"
-              triggers="mouseenter:mouseleave"
-              [style.background-color]="finals.color"
-              
-              style="
-                width: 12.5px;
-                height: 12.5px;
-                border-radius: 15%;
-           
-              
-           
-                border: 1px solid rgba(0, 0, 0, 0.1);">
 
-                <!-- <p style="font-size: 4px;" *ngIf =  "i%52!=0"> {{i}} </p>
+      <div class="col-11 ps-0 pe-2">
+        <!-- <div class="grid-container">-->
+        <div class="new-grid">
+          <a
+            href=""
+            *ngFor="let finals of final1; let i = index"
+            type="button"
+            class="mt-0 cell"
+            popover=" {{ finals.count }} contributions {{ finals.date }} "
+            popoverClass="my-custom-class"
+            triggers="mouseenter:mouseleave"
+            [style.background-color]="finals.color"
+            style="
+              width: 12.5px;
+              height: 12.5px;
+              border-radius: 15%;
+
+              border: 1px solid rgba(0, 0, 0, 0.1);
+            "
+          >
+            <!-- <p style="font-size: 4px;" *ngIf =  "i%52!=0"> {{i}} </p>
                 <p  style="font-size: 4px;" *ngIf =  "i%52===0" > h</p> -->
 
-                <br>
+            <br />
+          </a>
+        </div>
+        <!--  </div> -->
 
-            </a>
-          </div>
-       <!--  </div> -->
-
-
-
-
-    <div class="row" >
-
-
-
-    </div>
-
-
-
-
-
-        
+        <div class="row"></div>
       </div>
     </div>
   </div>
-  
 </section>
 
-
-
-
-
-
-
 <div class="row g-0 ml-0 p-0">
-
-<div class="col-md-10">
-
- <router-outlet></router-outlet>
-
+  <div class="col-md-10">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-md-2">
+    <li *ngFor="let year of list_arrays" class="list-style-none">
+      <a
+        routerLink="contributions"
+        class="contributions-text-decoration year-color"
+        (click)="contributions_to_child(year)"
+      >
+        {{ year }}
+      </a>
+    </li>
+  </div>
 </div>
-<div class="col-md-2">
-
-  <li  *ngFor="let year of list_arrays" class="list-style-none"  >
-  <a routerLink="contributions" class="contributions-text-decoration year-color  "  (click)="contributions_to_child(year)">
-
-
-   {{year}}
-
-</a>
-
-</li>
-
-
-</div>
-
-
-
-
-</div>
-

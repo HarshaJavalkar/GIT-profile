@@ -1,6 +1,5 @@
 .profile-img {
   margin-top: -7%;
-  
 
   width: 85%;
   border-radius: 50%;
@@ -9,15 +8,14 @@
   position: relative;
 }
 
-section{
-
-  padding:0px;
+section {
+  padding: 0px;
 }
 .title-name {
   font-size: 20px;
   font-weight: 100;
 
-  color:#808080;
+  color: #808080;
 }
 
 .profile-button {
@@ -30,8 +28,7 @@ section{
   border: 1px solid #d6d6d6; /* Green */
 }
 
-.p-bio{
-
+.p-bio {
   font-size: 16px;
   color: #24292e;
 }
@@ -45,101 +42,72 @@ section{
   z-index: -1;
 }
 
-
-li{
-
+li {
   list-style: none;
-
 }
-a{
 
+hr {
+  color: rgb(211, 211, 211);
+}
+a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.753);
 }
 
-ul{
+ul {
   font-size: 14px;
   color: #24292e;
 
   padding-left: 0;
 }
-.Link--secondary{
-
-  
-  font-size: 14px
-
+.Link--secondary {
+  font-size: 14px;
 }
-.Link--secondary:hover{
-
-
+.Link--secondary:hover {
   font-size: 14px;
   color: #0366d6;
 }
 
-
-.v-card{
-
+.v-card {
   padding-left: 10px;
-
-
 }
 
-.v-card-link:hover{
-color:  #002cee;
-text-decoration: underline;
-  
+.v-card-link:hover {
+  color: #002cee;
+  text-decoration: underline;
 }
 
-.fa-heart{
-font-size: 14px;
+.fa-heart {
+  font-size: 14px;
   font-weight: 400;
-  
+
   color: rgb(255, 106, 130);
   transition: 0.5s;
 }
 
-.btn{
-
+.btn {
   border-radius: 8px;
   border-color: rgb(213, 213, 213);
   background-color: rgb(245, 245, 245);
   font-size: 14px;
   font-weight: 600;
   width: 95%;
-  
 }
 
-
-.btn-hover:hover .fa-heart{
-  
+.btn-hover:hover .fa-heart {
   font-size: 18px;
-  
 }
 
-
-
-@media only screen and (max-width:1300px){
-
-
-  section{
-
-
-    padding:40px;
+@media only screen and (max-width: 1300px) {
+  section {
+    padding: 40px;
   }
 }
 
-
-
-
-
-@media only screen and ( max-width: 1000px){
-
-  section{
+@media only screen and (max-width: 1000px) {
+  section {
     padding: 20px;
-
   }
-
-
 
   .btn {
     border-radius: 5px;
@@ -150,25 +118,18 @@ font-size: 14px;
   }
 
   .profile-img {
-
-    
-  margin-top:-10px;
+    margin-top: -10px;
     width: 75%;
     border-radius: 50%;
     z-index: 10;
-  
+
     position: relative;
   }
 
-  section{
-
-    padding:20px;
+  section {
+    padding: 20px;
   }
-
-
 }
-
-
 
 @media only screen and (max-width: 768px) {
   .btn {
@@ -177,33 +138,21 @@ font-size: 14px;
     background-color: rgb(245, 245, 245);
     font-size: 12px;
     font-weight: 600;
-
-
   }
 
   .p_name-small-inline {
-
-display: inline;
-padding: 10px;
-float: left;  
-
+    display: inline;
+    padding: 10px;
+    float: left;
   }
 
-  
   .profile-img {
+    float: left;
+    margin-top: 0px;
+    width: 23%;
+    border-radius: 50%;
+    z-index: 10;
 
-     float: left;
-    margin-top:0px;
-      width: 23%;
-      border-radius: 50%;
-      z-index: 10;
-    
-      position: relative;
-    }
-
-  
-
-
-
-
+    position: relative;
+  }
 }

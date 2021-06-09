@@ -1,7 +1,8 @@
 .dropdown-button {
   border: 1px solid rgb(223, 223, 223);
   border-radius: 5px;
-  padding: 1px;
+  /* padding: 1px; */
+  width: 30%;
 
   background-color: rgba(245, 245, 245, 0.541);
 }
@@ -11,6 +12,12 @@ p {
   color: rgb(131, 131, 131);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+}
 .card {
   border-radius: 15px;
   margin-top: 20px;
@@ -22,3 +29,21 @@ p {
      margin-left: 2.1%;
         width: 31%;
     } */
+
+@media only screen and (max-width: 1700px) {
+  .dropdown-button {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .dropdown-button {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .dropdown-button {
+    width: 70%;
+  }
+}

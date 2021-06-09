@@ -37,13 +37,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     PopoverModule.forRoot(),
-    
+
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     HttpClientJsonpModule,
-    NgbModule
-    
-  
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

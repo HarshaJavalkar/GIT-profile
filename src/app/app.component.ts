@@ -10,30 +10,15 @@ export class AppComponent {
   title = 'git';
 
   username: any;
-  image: any
-  constructor(private hc : ServiceService) {
+  image: any;
+  constructor(private hc: ServiceService) {
+    this.username = JSON.stringify(localStorage.getItem('user'));
 
+    console.log(this.username);
+    this.hc.get_data_from_api(this.username).subscribe((res) => {
+      this.image = res.avatar_url;
 
-
-this.username=JSON.stringify(localStorage.getItem('user'))
-
-console.log(this.username)
-    this.hc.get_data_from_api(this.username).subscribe(
-
-
-      res=>{
-
-
-        this.image= res.avatar_url;
-
-        // console.log(this.image)
-      }
-    )
-
-      
-       
-
-
-
+      // console.log(this.image)
+    });
   }
 }
