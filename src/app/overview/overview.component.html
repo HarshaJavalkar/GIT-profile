@@ -1,6 +1,6 @@
 <section class="p-4">
   <div class="container-fluid">
-    <p class="bg-primary">Popular repositories</p>
+    <p class="m-0">Popular repositories</p>
 
     <div class="row row-cols-1 row-cols-md-2 justify-content-center">
 
@@ -9,7 +9,7 @@
 
 
 
-      <div class="card" *ngFor="let repo of final">
+      <div class="card card-overview" *ngFor="let repo of final">
   <div class="card-titles">
           <a class="text-decoration" href="https://github.com/{{user_name}}/{{repo.name}}">
           {{repo.name}}
@@ -28,12 +28,95 @@
       </div>
     </div>
   </div>
+
+
+<p class="mt-5">{{count_contributions}} contributions in {{year_selected}}</p>
+
+  <div class="card   p-2">
+    
+    <ul class="d-flex mt-4 calender-months">
+ 
+      <li class="month-row">Jan</li>
+      <li class="month-row">Feb</li>
+      <li class="month-row">Mar</li>
+  
+      <li class="month-row">Apr</li>
+      <li class="month-row">May</li>
+      <li class="month-row">Jun</li>
+      <li class="month-row">Jul</li>
+      <li class="month-row">Aug</li>
+      <li class="month-row">Sep</li>
+      <li class="month-row">Oct</li>
+      <li class="month-row">Nov</li>
+      <li class="month-row">Dec</li>
+    </ul>
+  
+    <div class="row ">
+      <div class="colsl-1">
+        <ul class="calender-days">
+          <li class=" month-row">Mon</li>
+  
+          <li class="pt-4 month-row">Wed</li>
+          <li class="pt-4 month-row">Fri</li>
+        </ul>
+      </div>
+  
+      <div class="col-11  ps-0 pe-2">
+        <!-- <div class="grid-container">-->
+          <div class="new-grid" > 
+            <a href="" *ngFor="let finals of final1 ; let i = index "
+              type="button"
+              class="mt-0 cell"
+              popover=" {{ finals.count }} contributions {{ finals.date }} "
+              popoverClass="my-custom-class"
+              triggers="mouseenter:mouseleave"
+              [style.background-color]="finals.color"
+              
+              style="
+                width: 12.5px;
+                height: 12.5px;
+                border-radius: 15%;
+           
+              
+           
+                border: 1px solid rgba(0, 0, 0, 0.1);">
+
+                <!-- <p style="font-size: 4px;" *ngIf =  "i%52!=0"> {{i}} </p>
+                <p  style="font-size: 4px;" *ngIf =  "i%52===0" > h</p> -->
+
+                <br>
+
+            </a>
+          </div>
+       <!--  </div> -->
+
+
+
+
+    <div class="row" >
+
+
+
+    </div>
+
+
+
+
+
+        
+      </div>
+    </div>
+  </div>
+  
 </section>
 
 
 
 
-<div class="row">
+
+
+
+<div class="row g-0 ml-0 p-0">
 
 <div class="col-md-10">
 
@@ -59,3 +142,4 @@
 
 
 </div>
+

@@ -22,7 +22,7 @@ export class ServiceService implements OnInit {
 
 
   
-  ngOnInit(){
+ngOnInit(){
 
    
 
@@ -34,9 +34,17 @@ return this.hc.get(`https://api.github.com/users/${JSON.parse(data1)}`)
   
   }
 
+  organisations(data1:any):Observable<any>{
+
+
+    
+    console.log(JSON.parse(data1))
+
+    return this.hc.get(`https://api.github.com/users/${JSON.parse(data1)}/orgs`)
+  }
+
 
   get_repos_pushed(data1:any):Observable<any>{
-
 
     return this.hc.get(`https://api.github.com/users/${data1}/repos?sort=pushed`)
   }

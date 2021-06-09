@@ -23,6 +23,7 @@ export class ProfileComponent implements OnInit {
   Pro_data:any
   starsArray: any
   created_at: any
+  organizations: any
 
 
   constructor(private ds: ServiceService,private ar: ActivatedRoute,private hc:HttpClient) {
@@ -73,6 +74,9 @@ export class ProfileComponent implements OnInit {
       
       
   this.dataUser=res
+
+
+
   let k=this.dataUser
 console.log(this.dataUser)
 this.h.push(k)
@@ -84,6 +88,25 @@ this.h.push(k)
     err=>{
 
     } );
+
+
+
+    this.ds.organisations(this.data1).subscribe(
+
+
+
+      res=>{
+
+        this.organizations=res
+
+        console.log(this.organizations)
+
+          
+         
+
+
+      }
+    )
 
 
 

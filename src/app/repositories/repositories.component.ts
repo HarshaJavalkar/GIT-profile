@@ -25,8 +25,17 @@ export class RepositoriesComponent implements OnInit {
   contributions: string = '';
   arr_names: any;
   data1 :any;
+  languageArray: any[]=[] ;
 
   final: any;
+
+
+  removeDuplicates(langArray: any){
+
+    return [...new Set(langArray)]
+
+
+  }
 
   ngOnInit(): void {
     this.colors = { ...Colors };
@@ -46,6 +55,7 @@ export class RepositoriesComponent implements OnInit {
           // name desc lang
           (data) => {
             this.repos = data;
+            console.log(data)
 
 
 
@@ -53,6 +63,8 @@ export class RepositoriesComponent implements OnInit {
 
             this.arr_names = [];
             this.final = data.map((repo:any) => {
+
+              this.languageArray.push(repo.language)
               return {
                 name: repo.name,
                 description: repo.description,
@@ -67,6 +79,14 @@ export class RepositoriesComponent implements OnInit {
                     : `Updated ${dayjs(repo.updated_at).fromNow()}`,
               };
             });
+
+
+
+
+            
+
+            this.languageArray=this.removeDuplicates(this.languageArray).filter((el)=>{return el!=null})
+            console.log(this.languageArray)
           }
         );
 

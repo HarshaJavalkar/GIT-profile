@@ -1,4 +1,4 @@
-.card{
+.card-overview{
 
 
     padding: 20px;
@@ -51,6 +51,7 @@
     text-decoration: none;
  
 }
+
 .contributions-text-decoration:focus{
 
     background-color: rgb(0, 123, 255);
@@ -73,6 +74,90 @@
 
     color: #586069;
 }
+
+
+
+.my-custom-class{
+
+
+    background-color: black;
+    color: white;
+}
+
+.month-row{
+
+
+    list-style: none;
+
+    font-size: 9px;
+    fill: #24292e;
+
+
+}
+
+.calender-days{
+justify-content: space-evenly;
+
+
+padding: 0;
+
+}
+.calender-months{
+
+    
+    padding-left:0  ;
+    justify-content: space-evenly;
+}
+
+
+
+
+.new-grid{
+
+    display: flex;
+    /* flex-direction: column; */
+
+/*  */
+
+    flex-wrap: wrap;
+    height: calc(30*7)px;
+}
+
+
+.cell{
+
+    margin: 2px;
+}
+
+
+
+.row1{
+
+    display: flex;
+}
+.colsl-1{
+
+
+    width: 5%;
+}
+/* .grid-container {
+    
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto   ;
+    grid-gap: 0px;
+    
+
+
+  }
+  
+  .grid-container > div {
+    
+ 
+    width: auto;
+
+  } */
+  
 
 
 

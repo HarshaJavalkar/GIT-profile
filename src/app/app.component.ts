@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from './service.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,30 @@ export class AppComponent {
   title = 'git';
 
   username: any;
+  image: any
+  constructor(private hc : ServiceService) {
 
-  constructor() {
-    setTimeout(() => {
-      this.username = localStorage.getItem('username'.replace('"', ''));
 
-      this.username = this.username.replace(/"/g, '');
-    }, 3000);
+
+this.username=JSON.stringify(localStorage.getItem('user'))
+
+console.log(this.username)
+    this.hc.get_data_from_api(this.username).subscribe(
+
+
+      res=>{
+
+
+        this.image= res.avatar_url;
+
+        // console.log(this.image)
+      }
+    )
+
+      
+       
+
+
+
   }
 }

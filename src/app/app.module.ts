@@ -17,6 +17,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ContriutionsComponent } from './contriutions/contriutions.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,9 @@ import { ContriutionsComponent } from './contriutions/contriutions.component';
     
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    NgbModule
+    
   
   ],
   providers: [],

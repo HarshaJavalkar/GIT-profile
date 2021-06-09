@@ -132,7 +132,7 @@ a {
   /* background-color:s #aa0000; */
 }
 
-a:hover {
+a.li-no-color:hover {
   background-color: #2f67d6;
   color: white;
 }
@@ -161,10 +161,12 @@ a:hover {
   z-index: 1;
 }
 
+
+
 img {
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .navbar-nav > li > .dropdown-menu {
   z-index: 9999;

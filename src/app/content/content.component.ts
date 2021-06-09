@@ -26,22 +26,10 @@ export class ContentComponent implements OnInit {
   count: any = 0;
 
   dataOfUser: string[] = [];
-  constructor(
-
-  ) {}
-
+  constructor() {}
 
   ngOnInit(): void {
-  
-   
-
-      
-this.count=localStorage.getItem('count')
-
-
-
-      
-    
+    this.count = localStorage.getItem('count');
   }
 
   placeholder(dataplace: any) {
