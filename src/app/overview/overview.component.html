@@ -1,3 +1,4 @@
+
 <p style="text-align: left; font-weight: 600" class="mt-4">
   Popular repositories
   <span style="float: right; font-size: 15px; font-weight: 400">
@@ -26,3 +27,118 @@
   </div>
 </div>
 <!--  -->
+=======
+<section class="p-4">
+  <div class="container-fluid">
+    <p class="m-0">Popular repositories</p>
+
+    <div class="row row-cols-1 row-cols-md-2 justify-content-center">
+      <div class="card card-overview" *ngFor="let repo of final">
+        <div class="card-titles">
+          <a
+            class="text-decoration"
+            href="https://github.com/{{ user_name }}/{{ repo.name }}"
+          >
+
+          <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-repo mr-2 color-text-secondary flex-shrink-0">
+            <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+        </svg>
+            {{ repo.name }}
+          </a>
+        </div>
+        <span class="sub-title"
+          >Forked from Pierian-Data/Complete-Python-3-Bootcamp</span
+        >
+        <div class="card-body p-0 pt-3">
+          <p>{{ repo.description }}</p>
+        </div>
+
+        <div class="card-footer p-0" *ngIf="repo.color">
+          <i class="fas fa-circle" [style.color]="repo.color"></i>
+          <p class="m-0 d-inline ms-1">{{ repo.language }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="mt-5">
+    {{ count_contributions }} contributions in {{ year_selected }}
+  </p>
+
+  <div class="card p-2">
+    <ul class="d-flex mt-4 calender-months">
+      <li class="month-row">Jan</li>
+      <li class="month-row">Feb</li>
+      <li class="month-row">Mar</li>
+
+      <li class="month-row">Apr</li>
+      <li class="month-row">May</li>
+      <li class="month-row">Jun</li>
+      <li class="month-row">Jul</li>
+      <li class="month-row">Aug</li>
+      <li class="month-row">Sep</li>
+      <li class="month-row">Oct</li>
+      <li class="month-row">Nov</li>
+      <li class="month-row">Dec</li>
+    </ul>
+
+    <div class="row">
+      <div class="colsl-1">
+        <ul class="calender-days">
+          <li class="month-row">Mon</li>
+
+          <li class="pt-4 month-row">Wed</li>
+          <li class="pt-4 month-row">Fri</li>
+        </ul>
+      </div>
+
+      <div class="col-11 ps-0 pe-2">
+        <!-- <div class="grid-container">-->
+        <div class="new-grid">
+          <a
+            href=""
+            *ngFor="let finals of final1; let i = index"
+            type="button"
+            class="mt-0 cell"
+            popover=" {{ finals.count }} contributions {{ finals.date }} "
+            popoverClass="my-custom-class"
+            triggers="mouseenter:mouseleave"
+            [style.background-color]="finals.color"
+            style="
+              width: 12.5px;
+              height: 12.5px;
+              border-radius: 15%;
+
+              border: 1px solid rgba(0, 0, 0, 0.1);
+            "
+          >
+            <!-- <p style="font-size: 4px;" *ngIf =  "i%52!=0"> {{i}} </p>
+                <p  style="font-size: 4px;" *ngIf =  "i%52===0" > h</p> -->
+
+            <br />
+          </a>
+        </div>
+        <!--  </div> -->
+
+        <div class="row"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row g-0 ml-0 p-0">
+  <div class="col-md-10">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-md-2">
+    <li *ngFor="let year of list_arrays" class="list-style-none">
+      <a
+        routerLink="contributions"
+        class="contributions-text-decoration year-color"
+        (click)="contributions_to_child(year)"
+      >
+        {{ year }}
+      </a>
+    </li>
+  </div>
+</div>

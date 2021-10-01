@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentComponent } from './content/content.component';
+import { ContriutionsComponent } from './contriutions/contriutions.component';
 import { OverviewComponent } from './overview/overview.component';
 import { PackagesComponent } from './packages/packages.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -18,7 +19,11 @@ const routes: Routes = [
 { path : ":username",component:ContentComponent,children:[
 { path: '',   redirectTo: 'overview', pathMatch: 'full' },
 
-  { path:"overview",component:OverviewComponent },
+  { path:"overview",component:OverviewComponent, children:[
+
+
+    {path :"contributions", component:ContriutionsComponent}
+  ] },
   { path:"repositories",component:RepositoriesComponent },
   { path:"projects",component:ProjectsComponent },
   { path:"packages",component:PackagesComponent },

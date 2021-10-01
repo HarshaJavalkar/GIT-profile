@@ -12,6 +12,8 @@
 }
 
 .placeholder-border {
+  color: black;
+  font-weight: 600;
   border-bottom: 3px solid orange;
 }
 
@@ -26,4 +28,93 @@ a {
 
   color: black;
   /* background-color:s #aa0000; */
+}
+.sec-nav-color {
+  color: #29292e;
+  font-size: 14px;
+}
+
+svg {
+  color: rgb(228, 228, 228);
+}
+
+div.scrollmenu-large {
+  padding-top: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+div.scrollmenu-large a {
+  display: inline;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu {
+  padding-top: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+div.scrollmenu a {
+  display: inline;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu {
+  display: none;
+}
+
+.container-css {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+@media only screen and (max-width: 1650px) {
+  .container-css {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .container-css {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .container-css {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  div.scrollmenu-large {
+    display: none;
+  }
+
+  div.scrollmenu {
+    display: block;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .col-md-9 {
+    width: 100%;
+  }
 }

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "node server.js ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -21,6 +21,9 @@
     "@angular/platform-browser": "~12.0.0",
     "@angular/platform-browser-dynamic": "~12.0.0",
     "@angular/router": "~12.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^9.1.2",
+    "@types/axios": "^0.14.0",
+    "cors": "^2.8.5",
     "date-fns": "^2.22.0",
     "dayjs": "^1.10.5",
     "express": "^4.17.1",

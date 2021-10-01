@@ -10,14 +10,15 @@ import { OverviewComponent } from './overview/overview.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PackagesComponent } from './packages/packages.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 // import { UsersComponent } from './users/users.component';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PinnedRepositoriesComponent } from './pinned-repositories/pinned-repositories.component';
-
+import { ContriutionsComponent } from './contriutions/contriutions.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { PinnedRepositoriesComponent } from './pinned-repositories/pinned-reposi
     PackagesComponent,
     PagenotfoundComponent,
     PinnedRepositoriesComponent,
+    ContriutionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,8 +39,11 @@ import { PinnedRepositoriesComponent } from './pinned-repositories/pinned-reposi
     AppRoutingModule,
     HttpClientModule,
     PopoverModule.forRoot(),
+
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
+    HttpClientJsonpModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

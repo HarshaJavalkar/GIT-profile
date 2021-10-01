@@ -1,46 +1,124 @@
-.rounded-popular {
-  border-radius: 10px;
+.card-overview {
+  padding: 20px;
+  width: 48%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+.card-overflow {
+  overflow-x: scroll;
+}
+.card-footer {
+  background-color: white;
+  border-top: 0;
 }
 
-.color-indicatrs-1,
-.color-indicatrs-2,
-.color-indicatrs-3,
-.color-indicatrs-4,
-.color-indicatrs-5 {
-  margin: 3px;
+.text-decoration,
+.card-titles p {
+  font-weight: 600;
 
-  /* float: right; */
-  height: 15px;
-  width: 15px;
-  /* border: 1px solid black; */
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 0;
+
+  color: rgb(0, 102, 255);
 }
 
-.color-indicatrs-5 {
-  background-color: rgb(0, 97, 0);
+.text-decoration:hover {
+  text-decoration: underline;
+
+  cursor: pointer;
 }
 
-.color-indicatrs-4 {
-  background-color: rgb(0, 141, 0);
+.card-body,
+.card-footer,
+.sub-title {
+  font-size: 12px;
 }
 
-.color-indicatrs-3 {
-  background-color: rgb(3, 190, 3);
+.contributions-text-decoration {
+  text-decoration: none;
 }
 
-.color-indicatrs-2 {
-  background-color: rgba(96, 199, 0, 0.418);
+.contributions-text-decoration:focus {
+  background-color: rgb(0, 123, 255);
+  color: white;
+}
+.list-style-none {
+  list-style: none;
+
+  font-size: 12px;
+
+  padding: 1em 0 1em 0;
+}
+.year-color {
+  color: #586069;
 }
 
-.color-indicatrs-1 {
-  background-color: rgb(234, 255, 234);
+.my-custom-class {
+  background-color: black;
+  color: white;
 }
 
-.vl {
-  border-left: 3px solid rgb(223, 223, 223);
-  height: 60px;
-  margin-left: 10px;
+.month-row {
+  list-style: none;
+
+  font-size: 9px;
+  fill: #24292e;
 }
 
-.TimelineItem-badge {
-  margin-left: 3px solid grey;
+.calender-days {
+  justify-content: space-evenly;
+
+  padding: 0;
+}
+.calender-months {
+  padding-left: 0;
+  justify-content: space-evenly;
+}
+
+.new-grid {
+  display: flex;
+  /* flex-direction: column; */
+
+  /*  */
+
+  flex-wrap: wrap;
+  height: calc(30 * 7) px;
+}
+
+.cell {
+  margin: 2px;
+}
+
+.row1 {
+  display: flex;
+}
+.colsl-1 {
+  width: 5%;
+}
+/* .grid-container {
+    
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto   ;
+    grid-gap: 0px;
+    
+
+
+  }
+  
+  .grid-container > div {
+    
+ 
+    width: auto;
+
+  } */
+
+@media only screen and (max-width: 768px) {
+  .card {
+    padding: 20px;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 10px;
+  }
 }
