@@ -16,6 +16,7 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PinnedRepositoriesComponent } from './pinned-repositories/pinned-repositories.component';
 import { ContriutionsComponent } from './contriutions/contriutions.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
@@ -29,6 +30,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProjectsComponent,
     PackagesComponent,
     PagenotfoundComponent,
+    PinnedRepositoriesComponent,
     ContriutionsComponent,
   ],
   imports: [
